@@ -13,8 +13,7 @@ namespace Strategy
             orcamento.AdicionaItem(new Item("LAPIS", 250));
             orcamento.AdicionaItem(new Item("GELADEIRA", 250));
             orcamento.AdicionaItem(new Item("FOGAO", 250));
-            orcamento.AdicionaItem(new Item("MICROONDAS", 250));
-            orcamento.AdicionaItem(new Item("XBOX", 250));
+            orcamento.AdicionaItem(new Item("MICROONDAS", 250));            
 
             double desconto = calculador.Calcula(orcamento);
             Console.WriteLine(desconto);
