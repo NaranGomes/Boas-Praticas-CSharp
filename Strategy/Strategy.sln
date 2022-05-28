@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy", "Strategy\Strate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Investimentos", "Investimentos\Investimentos.csproj", "{1F976F86-54B5-4A2D-A01E-8C396D146E8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequisicoesWeb", "RequisicoesWeb\RequisicoesWeb.csproj", "{93FD5466-2046-4FC1-898A-AEE825A78D4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequisicoesWeb", "RequisicoesWeb\RequisicoesWeb.csproj", "{93FD5466-2046-4FC1-898A-AEE825A78D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "TemplateMethod\TemplateMethod.csproj", "{F77060A9-CF3B-4E8A-913E-B3215C22825D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{93FD5466-2046-4FC1-898A-AEE825A78D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93FD5466-2046-4FC1-898A-AEE825A78D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93FD5466-2046-4FC1-898A-AEE825A78D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77060A9-CF3B-4E8A-913E-B3215C22825D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77060A9-CF3B-4E8A-913E-B3215C22825D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77060A9-CF3B-4E8A-913E-B3215C22825D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77060A9-CF3B-4E8A-913E-B3215C22825D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
