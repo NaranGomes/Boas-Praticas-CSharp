@@ -6,18 +6,12 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-           CalculadorDeDescontos calculador =  new CalculadorDeDescontos();
+            IImposto impostoMuitoAlto = new IKCV(new ICPP());
+            Orcamento orcamento = new Orcamento(100);
 
-            Orcamento orcamento = new Orcamento(500);
-            orcamento.AdicionaItem(new Item("CANETA", 500));
-            orcamento.AdicionaItem(new Item("LAPIS", 250));
-            orcamento.AdicionaItem(new Item("GELADEIRA", 250));
-            orcamento.AdicionaItem(new Item("FOGAO", 250));
-            orcamento.AdicionaItem(new Item("MICROONDAS", 250));            
+            double valor = impostoMuitoAlto.Calcula(orcamento);
 
-            double desconto = calculador.Calcula(orcamento);
-            Console.WriteLine(desconto);
-
+            Console.WriteLine(valor);
             Console.ReadKey();
         }
     }

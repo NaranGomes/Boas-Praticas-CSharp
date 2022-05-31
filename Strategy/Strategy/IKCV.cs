@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 namespace Strategy
 {
     public class IKCV : TemplateDeImpostoCondicional
-    {        
+    {
+        public IKCV()
+        {
+        }
+
+        public IKCV(IImposto outroImposto) : base(outroImposto)
+        {
+        }
 
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {

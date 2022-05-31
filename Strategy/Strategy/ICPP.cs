@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 namespace Strategy
 {
     public class ICPP : TemplateDeImpostoCondicional
-    {    
+    {
+        public ICPP()
+        {
+        }
+
+        public ICPP(IImposto outroImposto) : base(outroImposto)
+        {
+        }
 
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {

@@ -8,17 +8,25 @@ namespace Strategy
 {
     public class ICCC : IImposto
     {
-        public double Calcula(Orcamento orcamento)
+        public ICCC()
+        {
+        }
+
+        public ICCC(IImposto outroImposto) : base(outroImposto)
+        {
+        }
+
+        public override double Calcula(Orcamento orcamento)
         {
             double val = orcamento.Valor;
             if(val <= 999.0)
             {
-                return val * 0.05;
+                return val * 0.05 + CalculoDoOutroImposto(orcamento);
             }else if(val <= 3000)
             {
-                return val * 0.07;
+                return val * 0.07 + CalculoDoOutroImposto(orcamento);
             }
-            return (val * 0.08) + 30;
+            return (val * 0.08) + 30 + CalculoDoOutroImposto(orcamento);
         }
     }
 }

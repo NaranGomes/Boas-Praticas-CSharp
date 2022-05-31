@@ -8,6 +8,14 @@ namespace Strategy
 {
     public class IHIT : TemplateDeImpostoCondicional
     {
+        public IHIT()
+        {
+        }
+
+        public IHIT(IImposto outroImposto) : base(outroImposto)
+        {
+        }
+
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
             return ExistemDoisItensComMesmoNome(orcamento);
