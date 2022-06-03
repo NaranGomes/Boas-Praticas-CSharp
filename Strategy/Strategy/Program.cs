@@ -6,12 +6,21 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            IImposto impostoMuitoAlto = new IKCV(new ICPP());
-            Orcamento orcamento = new Orcamento(100);
+            
+            Orcamento reforma = new Orcamento(500);
 
-            double valor = impostoMuitoAlto.Calcula(orcamento);
+            Console.WriteLine(reforma.Valor);
 
-            Console.WriteLine(valor);
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Aprova();
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Finaliza();
+            Console.WriteLine(reforma.Valor);
+
             Console.ReadKey();
         }
     }
