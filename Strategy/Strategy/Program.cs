@@ -6,20 +6,19 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            
-            Orcamento reforma = new Orcamento(500);
 
-            Console.WriteLine(reforma.Valor);
+            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador
+                .ParaEmpresa("Caelum Ensino e Inovação")
+                .ComCnpj("23.456.789/0001-12")
+                .ComItem(new ItemDaNota("item 1", 100.0))
+                .ComItem(new ItemDaNota("item 2", 200.0))
+                .NaDataAtual()
+                .ComObservacoes("uma obs qualquer");
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-
-            reforma.Aprova();
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-
-            reforma.Finaliza();
-            Console.WriteLine(reforma.Valor);
+            NotaFiscal nf = criador.Constroi();
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
 
             Console.ReadKey();
         }
