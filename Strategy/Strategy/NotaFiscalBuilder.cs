@@ -12,9 +12,10 @@ namespace Strategy
         
         private double valorTotal;
         private double Impostos;
+        private IList<AcaoAposGerarNota> todasAcoesASeremExecutadas;
 
         public IList<ItemDaNota> todosItens = new List<ItemDaNota>();
-        
+                
         public NotaFiscalBuilder ParaEmpresa(string razaoSocial)
         {
             this.RazaoSocial = razaoSocial;
@@ -23,8 +24,16 @@ namespace Strategy
 
         public NotaFiscal Constroi()
         {
-            return new NotaFiscal(RazaoSocial, Cnpj, Data, valorTotal,
+            var nf = new NotaFiscal(RazaoSocial, Cnpj, Data, valorTotal,
                 Impostos, todosItens, Observacoes);
+
+            foreach (AcaoAposGerarNota acao in todasAcoesASeremExecutadas)
+            {
+                acao.Executa(nf);
+            }
+
+
+            return nf;
         }
 
         public NotaFiscalBuilder NaDataAtual()
